@@ -1,3 +1,4 @@
+<button (click)="toggleProductDetail()"> CLICK </button>
 <div class="products--grid">
   <app-product
     [product]="product"
@@ -5,9 +6,9 @@
     (addedProduct)="onAddToShoppingCart($event)"
   ></app-product>
 </div>
-<div class="product-detail">
+<div class="product-detail" [class.active]="showProductDetail" >
   <div class="">
-    <button>Close</button>
+    <button (click)="toggleProductDetail()" >Close</button>
     Contenido
   </div>
 </div>
