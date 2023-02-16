@@ -22,7 +22,7 @@ export class ProductComponent {
   };
 
   @Output() addedProduct = new EventEmitter<Product>();
-  @Output() ShowDetail = new EventEmitter<string>();
+  @Output() showProduct = new EventEmitter<string>();
 
   constructor() { }
 
@@ -31,7 +31,7 @@ export class ProductComponent {
   }
 
   onShowDetail(){
-    this.ShowDetail.emit(this.product.id)
+    this.showProduct.emit(this.product.id)
   }
 
 }

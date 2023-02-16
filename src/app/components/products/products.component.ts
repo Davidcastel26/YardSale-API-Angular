@@ -42,7 +42,11 @@ export class ProductsComponent implements OnInit {
   }
 
   onShowDetail(id:string){
-    console.log('id')
+    this.productsService.getProduct(id)
+    .subscribe(data => {
+      console.log('product', data);
+      
+    })
   }
 
 }
